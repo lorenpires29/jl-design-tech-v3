@@ -43,8 +43,11 @@ class ProdutoAfiliadoAdmin(admin.ModelAdmin):
   return format_html('<img src="{}" alt="Prévia" style="max-width:180px;max-height:180px;border-radius:10px">',url) if url else "Sem imagem"
  @admin.display(description="Link")
  def situacao_link(self,obj):
-  try: obj.full_clean();return "Válido"
-  except ValidationError: return "Revisar"
+  try:
+   obj.full_clean()
+   return "Válido"
+  except ValidationError:
+   return "Revisar"
  @admin.action(description="Aprovar e publicar ofertas selecionadas")
  def aprovar(self,request,queryset):
   ok=0
