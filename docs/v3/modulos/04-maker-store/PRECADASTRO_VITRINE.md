@@ -1,17 +1,18 @@
-# Pré-cadastro da vitrine Shopee / Collshp
+# Pré-cadastro Shopee / Collshp
 
-Fonte: prints enviados pela proprietária e HTML fornecido posteriormente. Vitrine geral: https://collshp.com/lorenpires993?view=storefront
+Origem: prints e HTML da vitrine enviados pela proprietária. URL da vitrine: https://collshp.com/lorenpires993?view=storefront
 
-## Seis produtos distintos
-| Produto | Preço do print | Foto |
+| Produto | Preço observado | Foto original |
 |---|---:|---|
-| Kit de Ferramentas para Impressora 3D — 9 peças | R$ 39,90 | URL original recebida, vinculada |
-| Kit de Ferramentas para Impressora 3D — até 60 peças | R$ 95,00 | URL original recebida, vinculada |
-| Placa de aço com mola para impressora 3D | R$ 69,38 | Pendente |
-| Filamento PLA Silk SOL3D 1 kg | R$ 94,05 | Pendente |
-| Filamento PLA Preto Velvet Premium 1 kg | R$ 99,66 | Pendente |
-| Filamento MasterPrint 1 kg | R$ 69,90 | Pendente |
+| Kit de ferramentas 3D, 9 peças | R$ 39,90 | br-11134207-820l9-mr7wb7c5gume41_tn.webp |
+| Kit de ferramentas 3D, até 60 peças | R$ 95,00 | br-11134207-820l8-mt4z6tljzimda6_tn.webp |
+| Placa de aço com mola PEI + PE | R$ 69,38 | sg-11134201-7rbko-lmo3bgl0m7h5c3_tn.webp |
+| Filamento PLA Silk SOL3D 1 kg | R$ 94,05 | br-11134207-820lr-mu1jzyp7uhoice_tn.webp |
+| Filamento PLA Preto Velvet Voolt3D 1 kg | R$ 99,66 | br-11134207-820ld-ms2tczb1sb2c16_tn.webp |
+| Filamento MasterPrint PETG/PLA 1 kg | R$ 69,90 | br-11134207-820l6-mmt10la8o934cd_tn.webp |
 
-O HTML recebido contém fotos, títulos e preços dos dois kits, mas não contém href nem URL de compra individual. Ambos continuam direcionando à vitrine geral, com aviso ao visitante. Fotos externas usam a URL original da Shopee e podem deixar de carregar se o servidor bloquear hotlinking. O campo `imagem` local continua prioritário quando preenchido.
+As seis URLs de foto foram extraídas do HTML fornecido, não inventadas. Migrações 0003 e 0004 vinculam as URLs externas e atualizam títulos, sem duplicar cadastros. Os dois anúncios repetidos no HTML permanecem um único cadastro cada.
 
-Os preços são históricos, não sincronizados. Os cadastros são criados pela migração 0002 e as duas fotos são vinculadas pela migração 0003. Para aplicar: `python manage.py migrate`.
+**Importante:** o HTML não contém `href`, IDs de anúncios nem URLs individuais de compra. Portanto, os seis produtos continuam apontando à vitrine geral, e as páginas de detalhes informam isso. Não atribuir links individuais por adivinhação.
+
+Os preços são fotografias de um momento, não dados em tempo real. A exibição de imagens depende da disponibilidade do servidor Shopee e de suas condições de uso. Para maior robustez, usar imagens autorizadas hospedadas localmente. Aplicar com `python manage.py migrate`.
