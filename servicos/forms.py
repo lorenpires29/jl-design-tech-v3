@@ -28,6 +28,6 @@ class SolicitacaoForm(forms.ModelForm):
   header=value.read(12)
   value.seek(pos)
   ext=value.name.lower().rsplit(".",1)[-1]
-  valid={"png":header.startswith(b"\\x89PNG\\r\\n\\x1a\\n"),"jpg":header.startswith(b"\\xff\\xd8\\xff"),"jpeg":header.startswith(b"\\xff\\xd8\\xff"),"pdf":header.startswith(b"%PDF-")}
+  valid={"png":header.startswith(b"\x89PNG\r\n\x1a\n"),"jpg":header.startswith(b"\xff\xd8\xff"),"jpeg":header.startswith(b"\xff\xd8\xff"),"pdf":header.startswith(b"%PDF-")}
   if not valid.get(ext,False): raise ValidationError("O conteúdo do arquivo não corresponde ao formato informado.")
   return value
