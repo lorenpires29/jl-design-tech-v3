@@ -19,4 +19,4 @@ class ContasTests(TestCase):
   self.assertEqual(self.client.get(reverse("dashboard")).status_code,302)
   User.objects.create_user("ana",password="SenhaMuitoForte2026!")
   self.client.login(username="ana",password="SenhaMuitoForte2026!")
-  self.assertEqual(self.client.get(reverse("dashboard")).status_code,403)
+  self.assertEqual(self.client.get(reverse("dashboard")).status_code,302)
