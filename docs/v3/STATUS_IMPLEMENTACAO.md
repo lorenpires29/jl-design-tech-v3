@@ -1,12 +1,11 @@
-# Status de implementação — JL Design Tech V3
+# Status da implementação V3
 
-| Módulo | Situação | Homologação |
+| Módulo | Implementação | Pendências |
 |---|---|---|
-| 01 Home e Institucional | Base implementada | Pendente |
-| 02 Catálogo | Funcionalidades e testes escritos; cliques externos registrados | Pendente de CI e revisão visual |
-| 03 Serviços e Orçamentos | Fluxo público e administração Django implementados | Pendente de CI, segurança dos anexos e revisão visual |
-| 04–12 | Backlog documentado | Não iniciados |
+| 01 Home e Institucional | Base Django | Homologação visual |
+| 02 Catálogo | Catálogo, filtros, Shopee e cliques | Homologação e CI |
+| 03 Serviços e Orçamentos | Solicitações, serviços e gestão | Segurança de anexos, homologação e CI |
+| 04 Maker Store | Vitrine, curadoria manual, parceiros, filtros, cliques | Importação Collshp, homologação e CI |
+| 05–12 | Backlog organizado | A implementar |
 
-**Atenção:** as fichas de 118 US são resumos com links para a documentação original. A migração integral dos critérios de aceitação continua pendente. Não confundir funcionalidades implementadas com homologação concluída.
-
-Executar `python manage.py migrate`, `python manage.py check`, `python manage.py makemigrations --check --dry-run` e `python manage.py test`.
+As 118 histórias permanecem indexadas com links à versão original; a migração integral dos critérios ainda está pendente. Nenhum módulo deve ser marcado como homologado sem execução dos testes e conferência das telas.
