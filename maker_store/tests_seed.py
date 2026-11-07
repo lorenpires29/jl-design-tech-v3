@@ -11,5 +11,5 @@ class VitrineSeedTests(TestCase):
   slugs=("kit-ferramentas-impressora-3d-9-pecas","kit-ferramentas-impressora-3d-ate-60-pecas","placa-aco-mola-impressora-3d","filamento-pla-silk-sol3d-1kg","filamento-pla-preto-velvet-premium-1kg","filamento-masterprint-1kg-175mm")
   for slug in slugs:
    p=ProdutoAfiliado.objects.get(slug=slug)
-   self.assertTrue(p.imagem_externa.startswith("https://down-br.img.susercontent.com/"))
+   self.assertTrue(p.imagem_externa.startswith("https://down-br.img.susercontent.com/file/"))
    self.assertContains(self.client.get(reverse("maker_detalhe",args=[slug])),p.imagem_externa)
