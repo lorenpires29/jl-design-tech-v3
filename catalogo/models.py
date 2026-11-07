@@ -31,3 +31,9 @@ class AnuncioShopee(models.Model):
  def save(self,*args,**kwargs):
   self.full_clean()
   return super().save(*args,**kwargs)
+
+class CliqueAnuncio(models.Model):
+ anuncio=models.ForeignKey(AnuncioShopee,on_delete=models.CASCADE,related_name="cliques")
+ criado_em=models.DateTimeField(auto_now_add=True)
+ class Meta:
+  ordering=["-criado_em"]

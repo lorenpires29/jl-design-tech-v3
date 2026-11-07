@@ -17,7 +17,7 @@ def detalhe(request,slug):
 
 @require_http_methods(["GET","POST"])
 def solicitar(request):
- form=SolicitacaoForm(request.POST or None,request.FILES or None)
+ form=SolicitacaoForm(request.POST or None,request.FILES or None,initial={"servico":request.GET.get("servico")} if request.method=="GET" else None)
  if request.method=="POST" and form.is_valid():
   form.save()
   messages.success(request,"Solicitação recebida! Nossa equipe entrará em contato.")

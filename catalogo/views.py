@@ -3,7 +3,7 @@ from django.core.paginator import Paginator
 from django.db.models import Q
 from django.http import Http404
 from django.shortcuts import get_object_or_404,render,redirect
-from .models import Produto,Categoria,AnuncioShopee
+from .models import Produto,Categoria,AnuncioShopee,CliqueAnuncio
 def lista(request):
  produtos=Produto.objects.filter(ativo=True,categoria__ativa=True).select_related("categoria")
  q=request.GET.get("q","").strip()[:120]
@@ -20,4 +20,5 @@ def comprar(request,pk):
  a=get_object_or_404(AnuncioShopee,pk=pk,ativo=True,produto__ativo=True,produto__categoria__ativa=True)
  try: a.full_clean()
  except ValidationError as e: raise Http404("Anúncio indisponível") from e
+ CliqueAnuncio.objects.create(anuncio=a)
  return redirect(a.url)
