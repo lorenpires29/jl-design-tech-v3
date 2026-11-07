@@ -32,6 +32,7 @@ class ProdutoAfiliado(models.Model):
  slug=models.SlugField(unique=True)
  descricao=models.TextField(blank=True)
  imagem=models.ImageField(upload_to="maker_store/",blank=True)
+ imagem_externa=models.URLField(max_length=1000,blank=True,help_text="URL HTTPS da foto original do parceiro")
  url_destino=models.URLField(max_length=2000,validators=[validar_link_parceiro])
  preco_informativo=models.DecimalField(max_digits=10,decimal_places=2,null=True,blank=True)
  status_revisao=models.CharField(max_length=10,choices=Revisao.choices,default=Revisao.PENDENTE)
