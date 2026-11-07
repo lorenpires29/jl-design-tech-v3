@@ -11,3 +11,7 @@ class InstitucionalTests(TestCase):
   r=self.client.post(url,{"nome":"Ana","email":"ana@example.com","mensagem":"Preciso de uma peça personalizada."})
   self.assertEqual(r.status_code,302)
   self.assertEqual(MensagemContato.objects.count(),1)
+
+ def test_cta_orcamento_aponta_para_formulario(self):
+  response=self.client.get(reverse("home"))
+  self.assertContains(response,'href="'+reverse("solicitar_orcamento")+'">Solicitar orçamento')
