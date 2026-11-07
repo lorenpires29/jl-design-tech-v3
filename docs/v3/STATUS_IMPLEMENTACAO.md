@@ -4,8 +4,10 @@
 |---|---|---|
 | 01 Home e Institucional | Base Django | Homologação visual |
 | 02 Catálogo | Catálogo, filtros, Shopee e cliques | Homologação e CI |
-| 03 Serviços e Orçamentos | Solicitações, serviços e gestão | Segurança de anexos, homologação e CI |
-| 04 Maker Store | Vitrine, curadoria manual, parceiros, filtros, cliques | Importação Collshp, homologação e CI |
-| 05–12 | Backlog organizado | A implementar |
+| 03 Serviços e Orçamentos | Solicitações e gestão | Segurança de anexos e homologação |
+| 04 Maker Store | Vitrine, curadoria e cliques | Importação Collshp e homologação |
+| 05 Contas | Cadastro, login, perfil, reset e Admin de usuários | SMTP, rate limit e política LGPD |
+| 06 Dashboard | Indicadores locais, filtros, alertas e menu fixo | Permissões granulares e integração Shopee |
+| 07–12 | Backlog organizado | A implementar |
 
-As 118 histórias permanecem indexadas com links à versão original; a migração integral dos critérios ainda está pendente. Nenhum módulo deve ser marcado como homologado sem execução dos testes e conferência das telas.
+As fichas das 118 US são índices vinculados ao backlog anterior. Critérios completos ainda devem ser transcritos e homologados. Status implementado não significa testado ou pronto para produção.
